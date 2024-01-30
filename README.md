@@ -1,8 +1,8 @@
-# React + Vite
+# API PROJECT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## created using react and exercise dp api(an free rapid api).
 
-Currently, two official plugins are available:
+day1: created the  project using vite, installed tailwind css, set up basic layout using  Tailwind CSS.
+and set up basic routing setup using react router dom v6 which is the latest version of react router and created some routes using create-browser-router and route provider and 'outlet' 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+day2: created an responsive navbar with navLinks from react router dom and completed home page and implemented marquee effect 
