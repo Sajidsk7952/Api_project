@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.navLink {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+.navLink:hover {
+  text-shadow: 2px 3px 4px black;
+  /* text-decoration: underline; */
+  transition: 0.2s text-shadow;
+}
+.red__gradient {
+  background: rgba(252, 77, 2, 0.936);
+  filter: blur(250px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #c4527e 0%, #f26592 100%);
+  filter: blur(900px);
+}
+
+.typeWriter {
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: 0.15em;
+  animation: typing 5s steps(50, end);
+}
+.cursor{
+  animation: cursor 0.8s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to{
+    width: 80%;
+  }
+}
+
+@keyframes cursor {
+  from {
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
