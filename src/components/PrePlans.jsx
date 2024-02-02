@@ -14,16 +14,13 @@ const PrePlans = () => {
     const bodyPartList = async () => {
       try {
         const response = await useFetch(
-          "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
-          FitnessOptions
+          "https://exercisedb.p.rapidapi.com/exercises/bodyPartList"
         );
         const equip = await useFetch(
-          "https://exercisedb.p.rapidapi.com/exercises/equipmentList",
-          FitnessOptions
+          "https://exercisedb.p.rapidapi.com/exercises/equipmentList"
         );
         const targetList = await useFetch(
-          "https://exercisedb.p.rapidapi.com/exercises/targetList",
-          FitnessOptions
+          "https://exercisedb.p.rapidapi.com/exercises/targetList"
         );
         setTargetData(targetList);
         setEquipData(equip);
@@ -42,9 +39,9 @@ const PrePlans = () => {
     return (
       <Fragment>
         <h1 className="sm:text-[45px] text-[25px] font-semibold capitalize text-center mb-6">
-        our pre-planned Workout Plans!!
-      </h1>
-      <p className="text-[20px] text-center ">Loading....</p>
+          our pre-planned Workout Plans!!
+        </h1>
+        <p className="text-[20px] text-center ">Loading....</p>
       </Fragment>
     ); // Add loading indicator if needed
   }
@@ -66,18 +63,18 @@ const PrePlans = () => {
         {/* <h1>Checkout Body Part Workouts</h1> */}
         <Marquee pauseOnHover={true} gradientColor="white" gradientWidth="200">
           <ul className="flex ">
-            {bodyPartData.map((item) => (
-              <li className="px-4 py-2 sm:text-[18px] text-[12px] bg-slate-500 mx-4 my-2 rounded-md text-white cursor-pointer hover:bg-orange-700 duration-700">
+            {bodyPartData?.map((item,index) => (
+              <li key={index} className="px-4 py-2 sm:text-[18px] text-[12px] bg-slate-500 mx-4 my-2 rounded-md text-white cursor-pointer hover:bg-orange-700 duration-700">
                 <NavLink to={`exercise/bodyPart/:${item}`}>{item}</NavLink>
               </li>
             ))}
           </ul>
         </Marquee>
-      
+
         {/* <h1>Checkout Equipments and their Workouts</h1> */}
         <Marquee pauseOnHover={true} direction="right">
           <ul className="flex ">
-            {equipData.map((item) => (
+            {equipData?.map((item) => (
               <li className="px-4 py-2 sm:text-[18px] text-[12px] bg-slate-500 mx-4 my-2 rounded-md text-white cursor-pointer hover:bg-orange-700 duration-700">
                 <NavLink to={`exercise/equipment/:${item}`}>{item}</NavLink>
               </li>
@@ -96,7 +93,7 @@ const PrePlans = () => {
         {/* <h1>checkout our plans for specific targeted parts</h1> */}
         <Marquee pauseOnHover={true}>
           <ul className="flex ">
-            {targetData.map((item) => (
+            {targetData?.map((item) => (
               <li className="px-4 py-2 sm:text-[18px] text-[12px] bg-slate-500 mx-4 my-2 rounded-md text-white cursor-pointer hover:bg-orange-700 duration-700">
                 <NavLink to={`exercise/targetList/:${item}`}>{item}</NavLink>
               </li>

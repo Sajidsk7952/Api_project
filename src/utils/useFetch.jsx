@@ -4,14 +4,19 @@ export const FitnessOptions = {
     limit: "10",
   },
   headers: {
-    "X-RapidAPI-Key": "23fb80631emshbe5c515dc2261eap12d1a7jsn422289619dac",
-    "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
-  },
+    'X-RapidAPI-Key': 'a1063abb0cmsh4be4308870d5799p1074b8jsn74316b3be456',
+    'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+  }
 };
-const useFetch = async (url, options) => {
-  const res = await fetch(url, options);
-  const data = await res.json();
-  return data;
+
+const useFetch = async (url) => {
+  try {
+    const res = await fetch(url, FitnessOptions);
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    throw Error(error);
+  }
 };
 
 export default useFetch;

@@ -51,6 +51,7 @@ const Navbar = () => {
             <li
               key={link.id}
               className="cursor-pointer text-[18px] text-primary mb-6 navLink mr-10"
+              onClick={()=>{setOpen(false)}}
             >
               <NavLink
                 to={`${link.to}`}

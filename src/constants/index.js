@@ -11,3 +11,8 @@ export const NavLinks = [{
     title:'Exercises',
     to:'exercises',
 },]
+
+const ExerciseCategory = [{
+    id:'all',
+    icon:''
+}]

@@ -6,7 +6,9 @@ import Exercises from "./pages/Exercises";
 import BodyPart from "./pages/BodyPart";
 import Equipment from "./pages/Equipment";
 import TargetList from "./pages/TargetList";
-import { exerciseLoader } from "./pages/Exercises";
+import { exerciseLoader } from "./pages/RootExercise";
+import RootExercise from "./pages/RootExercise";
+import ExerciseInfo from "./pages/ExerciseInfo";
 function App() {
   const routes = createBrowserRouter([
     {
@@ -18,8 +20,9 @@ function App() {
         {
           path: "exercises",
           element: <Exercises />,
-          loader:exerciseLoader,
           children: [
+            { index: true, element: <RootExercise />, loader: exerciseLoader },
+            { path:':name',element:<ExerciseInfo />},
             { path: "bodypart", element: <BodyPart /> },
             { path: "equipment", element: <Equipment /> },
             { path: "targetList", element: <TargetList /> },
