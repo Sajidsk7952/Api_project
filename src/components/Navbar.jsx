@@ -61,11 +61,11 @@ const Navbar = () => {
               </NavLink>
             </li>
           ))}
-          <li>
+          {/* <li>
             <button className="px-6 py-2 mr-10 text-[20px] bg-red-500 border-white border-2  text-white rounded-[6px] hover:shadow-lg hover:shadow-dimWhite hover:duration-1000">
               Profile
             </button>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

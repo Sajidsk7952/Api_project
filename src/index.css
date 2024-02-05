@@ -56,3 +56,9 @@
     opacity: 0;
   }
 }
+
+.strokeText{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(249, 249, 249);
+  -webkit-text-fill-color: transparent;
+}

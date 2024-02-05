@@ -17,7 +17,7 @@ const ExerciseCard = ({ data }) => {
 
         <button
           onClick={() => navigate(`${data.id}`)}
-          className="px-4 py-2 bg-orange-300 rounded-sm font-semibold mt-4"
+          className="px-4 py-2 bg-orange-300 border-2 border-orange-300 hover:bg-white duration-700 rounded-sm font-semibold mt-4"
         >
           view info
         </button>

@@ -1,7 +1,7 @@
 export const FitnessOptions = {
   method: "GET",
   parmas: {
-    limit: "10",
+    limit: "9",
   },
   headers: {
     'X-RapidAPI-Key': 'a1063abb0cmsh4be4308870d5799p1074b8jsn74316b3be456',
