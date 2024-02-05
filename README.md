@@ -7,6 +7,6 @@ and set up basic routing setup using react router dom v6 which is the latest ver
 
 day2: created an responsive navbar with navLinks from react router dom and completed home page and implemented marquee effect 
 
-day3: created an exercise page using react router dom and fetched data from exercise db api's endpoints and also utilized advance features of == loaders in react router dom == which is avaliable in router v6 and tlized them to get data from == api's == 
+day3: created an exercise page using react router dom and fetched data from exercise db api's endpoints and also utilized advance features of <mark >loaders in react router dom</mark> which is avaliable in router v6 and tlized them to get data from == api's == 
 
 day4: Created an variety of == exercise Category == and added images for their background and given the title of category and styled those titles as strokes
