@@ -13,7 +13,10 @@ const useFetch = async (url) => {
   try {
     const res = await fetch(url, FitnessOptions);
     const data = await res.json();
-    return data;
+    if(res.ok){
+      return data;
+    }
+    return [];
   } catch (error) {
     throw Error(error);
   }

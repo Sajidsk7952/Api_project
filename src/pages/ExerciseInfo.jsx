@@ -6,6 +6,7 @@ import SimilarExercises from "../components/SimilarExercises";
 const ExerciseInfo = () => {
   const [infoData, setInfoData] = useState(null);
   const params = useParams();
+  console.log(params);
   useEffect(() => {
     const getInfoData = async () => {
       const data = await useFetch(

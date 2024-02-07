@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useFetch from "../utils/useFetch";
+// import useFetch from "../utils/useFetch";
 import { useNavigate } from "react-router-dom";
 
 const Search = () => {
@@ -7,8 +7,9 @@ const Search = () => {
   const navigate = useNavigate();
   const submitHandler = async (e) => {
     e.preventDefault();
+    console.log(inputVal);
     if (inputVal) {
-      navigate();
+      navigate(`/exercises/search/:${inputVal}`);
     }
     setInputVal('');
   };

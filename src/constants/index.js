@@ -15,19 +15,19 @@ export const NavLinks = [{
 },]
 
 export const ExerciseCategory = [{
-    id:'all',
-    icon:gymImg,
-    title:'All',
-},{
     id:'bodypart',
     icon:bodypartImg,
     title:'Body Part',
+    to:'',
 },{
     id:'Equipment',
     icon:equipImg,
-    title:'Equipment'
+    title:'Equipment',
+    to:'',
 },{
     id:'targetList',
     icon:targetImg,
-    title:'Target List'
+    title:'Target List',
+    to:'',
+
 }]
