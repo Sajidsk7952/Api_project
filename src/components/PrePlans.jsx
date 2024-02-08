@@ -58,14 +58,14 @@ const PrePlans = () => {
         our pre-planned Workout Plans!!
       </h1>
       {/* Render your fetched data or perform further operations */}
-      <div className="absolute z-[0] bottom-0 left-0 red__gradient w-[30%] h-[50%]"></div>
+      {/* <div className="absolute z-[0] bottom-0 left-0 red__gradient w-[30%] h-[50%]"></div> */}
       <div className="">
         {/* <h1>Checkout Body Part Workouts</h1> */}
         <Marquee pauseOnHover={true} gradientColor="white" gradientWidth="200">
           <ul className="flex ">
             {bodyPartData?.map((item,index) => (
               <li key={index} className="px-4 py-2 sm:text-[18px] text-[12px] bg-slate-500 mx-4 my-2 rounded-md text-white cursor-pointer hover:bg-orange-700 duration-700">
-                <NavLink to={`exercise/bodyPart/:${item}`}>{item}</NavLink>
+                <NavLink to={`exercises/search/:${item}`}>{item}</NavLink>
               </li>
             ))}
           </ul>
@@ -76,7 +76,7 @@ const PrePlans = () => {
           <ul className="flex ">
             {equipData?.map((item) => (
               <li className="px-4 py-2 sm:text-[18px] text-[12px] bg-slate-500 mx-4 my-2 rounded-md text-white cursor-pointer hover:bg-orange-700 duration-700">
-                <NavLink to={`exercise/equipment/:${item}`}>{item}</NavLink>
+                <NavLink to={`exercises/search/:${item}`}>{item}</NavLink>
               </li>
             ))}
           </ul>
@@ -95,7 +95,7 @@ const PrePlans = () => {
           <ul className="flex ">
             {targetData?.map((item) => (
               <li className="px-4 py-2 sm:text-[18px] text-[12px] bg-slate-500 mx-4 my-2 rounded-md text-white cursor-pointer hover:bg-orange-700 duration-700">
-                <NavLink to={`exercise/targetList/:${item}`}>{item}</NavLink>
+                <NavLink to={`exercises/search/:${item}`}>{item}</NavLink>
               </li>
             ))}
           </ul>

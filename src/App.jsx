@@ -1,7 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootPage from "./pages/RootPage";
 import HomePage from "./pages/HomePage";
-import ContactForm from "./pages/ContactForm";
 import Exercises from "./pages/Exercises";
 import { exerciseLoader } from "./pages/RootExercise";
 import RootExercise from "./pages/RootExercise";
@@ -14,7 +13,6 @@ function App() {
       element: <RootPage />,
       children: [
         { index: true, element: <HomePage /> },
-        { path: "contact_Form", element: <ContactForm /> },
         {
           path: "exercises",
           element: <Exercises />,

@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import ExerciseNavigator from "./ExerciseNavigator";
 const ExerciseCard = ({ data }) => {
   const navigate = useNavigate();
   return (
@@ -9,15 +9,26 @@ const ExerciseCard = ({ data }) => {
         <img src={data.gifUrl} alt={data.namr} loading="lazy" />
       </div>
       <div className="text-left">
-      <p className="text-[16px] p-2 bg-pink-500 rounded-xl inline mr-4 text-white">{data.bodyPart}</p>
-        <p className="text-[16px] p-2 bg-red-500 rounded-xl inline mr-4 text-white">{data.target}</p>
-        <p className="text-[16px] p-2 bg-yellow-500 rounded-xl inline mr-4 text-white">{data.equipment}</p>
+        <div className=" flex justify-around items-center py-4">
+          <ExerciseNavigator
+            title={data.bodyPart}
+            classname={"bg-pink-500 shadow-[1px_1px_3px_2px_#ed64a6] text-[16px]"}
+          />
+          <ExerciseNavigator
+            title={data.equipment}
+            classname={"bg-red-500 shadow-[1px_1px_3px_2px_#FC8181] text-[16px]"}
+          />
+          <ExerciseNavigator
+            title={data.target}
+            classname={"bg-yellow-500 shadow-[1px_1px_3px_2px_#F6E05E] text-[16px]"}
+          />
+        </div>
         <h3 className="text-center font-semibold text-[18px] capitalize mt-4">
           {data.name}
         </h3>
 
         <button
-          onClick={() => navigate(`view/${data.id}`)}
+          onClick={() => navigate(`/exercises/view/${data.id}`)}
           className="px-4 py-2 bg-orange-300 border-2 border-orange-300 hover:bg-white duration-700 rounded-sm font-semibold mt-4"
         >
           view info

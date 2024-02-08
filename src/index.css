@@ -7,6 +7,9 @@
   padding: 0px;
   box-sizing: border-box;
 }
+body{
+  background-color: rgb(249, 240, 222);
+}
 .navLink {
   font-size: 20px;
   text-decoration: none;
